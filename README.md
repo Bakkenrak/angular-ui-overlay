@@ -18,13 +18,24 @@ Expects an object as parameter:
  + If the array is empty, all child nodes will be used to determine the overlay's dimensions.
 
 A direct child node (preferably div) needs to be present carrying an `overlay-container` attribute.
-This is used as the overlay container. To display further elements on the overlay, simply fill the `overlay-container` element
+This is used as the overlay container. To display further elements on the overlay, simply fill the `overlay-container` with these.
+
+### Styling
+Add a class to the overlay-container to style it and make it visually noticable.
+
+E.g.:
+    .my-overlay-container-class {
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 20;
+        overflow: hidden;
+	}
 
 ###Example:
     <div ui-overlay="{ active: showOverlayExpression, children: [2, 3]}">
-        <div overlay-container> ... </div>
+        <div overlay-container class="my-overlay-container-class"> ... </div>
         <div> ... </div>
         <div> ... will be used to determine the overlay's dimensions ... </div>
         <div> ... will be used to determine the overlay's dimensions ... </div>
         <div> ... </div>
     </div>
+
