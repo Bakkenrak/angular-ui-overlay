@@ -23,12 +23,7 @@ This is used as the overlay container. To display further elements on the overla
 ### Styling
 Add a class to the overlay-container to style it and make it visually noticable.
 
-E.g.:
-    .my-overlay-container-class {
-        background-color: rgba(0, 0, 0, .8);
-        z-index: 20;
-        overflow: hidden;
-	}
+E.g.: `.my-overlay-container-class { background-color: rgba(0, 0, 0, .8); z-index: 20; overflow: hidden; }`
 
 ###Example:
     <div ui-overlay="{ active: showOverlayExpression, children: [2, 3]}">
